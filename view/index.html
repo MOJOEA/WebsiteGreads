@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../src/courses.js"></script>
+    <title>Index Home</title>
+</head>
+<body>
+    <div id="nav"></div>
+    <main class="bg-gray-200 h-screen w-full p-8 flex flex-col items-center gap-5">
+        <div class="w-full h-[auto] flex justify-center">
+            <div class="bg-white flex flex-col shadow-[0_0_40px_#ccc] w-[90%] max-w-[90%] min-h-[100px] h-[auto] mt-8 mb-10">
+                <div class="w-[100%] h-[35px] bg-blue-500 flex justify-center items-center">
+                    <h1 class="text-white text-[18px] font-bold p-3">Welcome to website</h1>
+                </div>
+                <div class="bg-white flex flex-row justify-between items-center overflow-x-auto p-3 gap-4 mt-6 mb-8">
+                    <div class="w-full min-w-[250px] h-[150px] flex flex-col items-center border-[2px] border-gray-300 rounded-md p-2 gap-2">                    
+                        <h1 class="text-b text-[18px] font-bold p-3">Sigin</h1>
+                        <h3 class="text-b text-[12px] font-bold text-gray-400 -mt-3"> สมัครสมาชิกใหม่ เพื่อใช้งานระบบ</h3>
+                        <button class="w-[50%] h-[30px] bg-blue-500 text-white text-[12px] rounded-md hover:bg-blue-600"
+                        onclick="window.location.href='http://127.0.0.1:3000/public/from-Signin.html'">ลงทะเบียน</button>
+                    </div>
+                    <div class="w-full min-w-[250px] h-[150px] flex flex-col items-center border-[2px] border-gray-300 rounded-md p-2 gap-2">                    
+                        <h1 class="text-b text-[18px] font-bold p-3">Profile</h1>
+                        <h3 class="text-b text-[12px] font-bold text-gray-400 -mt-3"> ดูข้อมูลโปรไฟล์ของคุณ</h3>
+                        <button class="w-[50%] h-[30px] bg-blue-500 text-white text-[12px] rounded-md hover:bg-blue-600"
+                        onclick="window.location.href='http://127.0.0.1:3000/public/from-Profile.html'">ดูโปรไฟล์ผู้ใช้</button>
+                    </div>
+                    <div class="w-full min-w-[250px] h-[150px] flex flex-col items-center border-[2px] border-gray-300 rounded-md p-2 gap-2">                    
+                        <h1 class="text-b text-[18px] font-bold p-3">Edit</h1>
+                        <h3 class="text-b text-[12px] font-bold text-gray-400 -mt-3"> แก้ไขข้อมูลส่วนตัวของคุณ</h3>
+                        <button class="w-[50%] h-[30px] bg-blue-500 text-white text-[12px] rounded-md hover:bg-blue-600"
+                        onclick="window.location.href='http://127.0.0.1:3000/public/from-Edit.html'">แข้ไขโปรไฟล์</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
