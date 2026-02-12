@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['course']) || !is_array($_SESSION['course'])) {
+    $_SESSION['course'] = [];
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +15,20 @@ session_start();
     <title>Add Grade</title>
 </head>
 <body>
-    <div id="nav"></div>
+    <div id="nav">
+        <nav class="flex justify-between bg-gray-900 p-4 sticky top-0">
+            <div class="flex-1">
+                <a href="/public/CEO.html" class="text-white text-lg font-bold">Foodcenter</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="/public/CEO.html" class="text-gray-500 hover:text-white">Home</a>
+                <a href="http://localhost/Project/WebsiteGreads/view/manage_courses.php" class="text-gray-500 hover:text-white">manage</a>
+                <a href="http://localhost/Project/WebsiteGreads/view/add_grade.php" class="text-gray-500 hover:text-white">addgrade</a>
+                <a href="http://localhost/Project/WebsiteGreads/view/gpa_calculator.php" class="text-gray-500 hover:text-white">Recalculate</a>
+                <a href="/public/from-Edit.html" class="text-gray-500 hover:text-white">Edit</a>
+            </div>
+        </nav>
+    </div>
     <main class="bg-gray-200 h-screen w-full p-8 flex flex-col items-center gap-5">
        <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl">
            <h1 class="text-2xl font-bold mb-4">Mygrade management</h1>

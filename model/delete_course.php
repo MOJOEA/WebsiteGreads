@@ -3,6 +3,13 @@
 session_start();
 
 function deleteCourseList($index, $type) {
+    if ($type === 'courses_list') {
+        $name = $_SESSION[$type][$index]['name'];
+        if (in_array($name, $_SESSION['course']['name'], true)) {
+            // พบชื่อวิชา → ไม่ให้ลบ
+            return;
+    }}
+
     if (isset($_SESSION[$type][$index])) {
         unset($_SESSION[$type][$index]);
         $_SESSION[$type] = array_values($_SESSION[$type]);
