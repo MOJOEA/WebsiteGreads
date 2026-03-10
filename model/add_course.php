@@ -5,12 +5,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['course_name'];
     $credit = $_POST['course_credit'];
 
-    $list = array_column($_SESSION['course_list'], 'name');
-    if(in_array($name, $list)){
+    $list = array_map('strtolower', array_column($_SESSION['course_list'], 'name'));
+
+    if (in_array(strtolower($name), $list)) {
         header("Location: http://localhost/Project/WebsiteGreads/view/manage_courses.php?error=duplicate");
         exit();
     }
-    
+
     array_push($_SESSION['course_list'], [
         'name' => $name,
         'credit' => $credit
